@@ -1,0 +1,78 @@
+Q1. Import the data from Excel/.CSV file and find the mean and Median of Age and Income variables. 
+Dataset link - CardioGoodFitness.csv
+ 
+Dataset link - CardioGoodFitness.csv 
+
+   
+
+
+myData=read.csv("C:/Users/admin/Downloads/CardioGoodFitness.csv",stringsAsFactors = F)
+print(head(myData))
+mean=mean(myData$Age)
+print(mean)
+median=median(myData$Age) 
+print(median)
+ 
+mean=mean(myData$Income)
+print(mean)
+median=median(myData$Income) 
+print(median)
+         
+      
+
+
+Q2.Using the same dataset calculate S.D & Variance of Age, Income and Education.
+
+myData=read.csv("C:/Users/admin/Downloads/CardioGoodFitness.csv",stringsAsFactors = F)
+print(head(myData))
+ 
+A<-(myData$Age)
+var(A)
+sd(A)
+ 
+B<-(myData$Income)
+sd(B)
+var(B)
+ 
+c<-(myData$Education)
+sd(c)
+var(c)
+
+ 
+
+
+
+
+Q3. Define correlation and covariance of variable.
+       Calculate covariance & correlation between the  Age and Income , Age and Fitness variables.
+
+Correlation (cor)
+Covariance(cov)
+
+myData=read.csv("C:/Users/admin/Downloads/CardioGoodFitness.csv",stringsAsFactors = F)
+print(head(myData))
+ 
+A=cor(myData$Age,myData$Income)
+ 
+B=cov(myData$Age,myData$Income)
+ 
+C=cor(myData$Age,myData$Fitness)
+ 
+D=cov(myData$Age,myData$Fitness)
+ 
+
+Q.4 Define Skewness and Kurtosis.
+      Calculate Skewness and Kurtosis of Income and Education.
+
+library(moments)
+X=read.csv("C:/Users/admin/Downloads/CardioGoodFitness.csv",stringsAsFactors=F)
+X
+
+skewness(X$Income)
+skewness(X$Education)
+ 
+kurtosis(X$Income)
+kurtosis(X$Education)
+ 
+
+
