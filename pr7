@@ -1,0 +1,68 @@
+2.Coefficient of Correlation.
+ Q.1 The lengths and weights of a sample of six articles manufactured by a factor are given here. Plot scatter diagram. Compute coefficient of correlation. Comment on the result.
+
+Lengths(x)	3	5	6	7	10	11
+Weights(Y)	8	12	11	14	16	17
+
+
+x=c(3,5,6,7,10,11)
+y=c(8,12,11,14,16,17)
+plot(x,y)
+cor(x,y)
+ 
+
+
+
+
+3. Simple Linear Regression Analysis.
+
+ Q.1 The Amount of fertilizer used and production (in tons) is given in the following below.
+Fertilizer(x)	15	26	20	28	30	35	40	45
+Production(y)	82	99	92	107	125	135	145	160
+a)	Find equation of line of regression for Y on X.
+b)	Estimate Y, when X=37.
+
+a)  x=c(15,26,20,28,30,35,40,45)
+y=c(82,99,92,107,125,135,145,160)
+model=lm(y~x)
+model
+ 
+b) y=37.16+2.71*(37)
+Y
+ 
+
+Q.4 Plot the Scatter diagram from the following pairs of values. Find Out Coefficient of Correlation (r). fit a linear regression equation sales Prices (y) on Square Feet (X).
+Square Feet(X)	950	1100	1300	1550	1800	1950	2100	2150	2300
+Sales Prices(Y)	90	155	150	150	205	220	195	220	210
+
+
+x=c(95,110,130,155,180,195,210,215,230) 
+y=c(90,155,150,150,205,220,195,220,210) 
+plot(x,y,main = "Scatter plot",xlab = "Square Feet",ylab = "Sale Prices") 
+cor(x,y) 
+model=lm(y~x) 
+model
+ 
+Summary(model)
+ 
+
+
+Q5. Fit a regression model for the following data:
+# Values of height.
+151, 174, 138, 186, 128, 136, 179, 163, 152, 131
+
+# Values of weight.
+63, 81, 56, 91, 47, 57, 76, 72, 62, 48
+
+Also Calculate : coefficient of correlation, plot the graph, summary of the data.
+
+x=c(151,174,138,186,128,136,179,163,152,131) 
+y=c(63,81,56,91,47,57,76,72,62,48) 
+plot(x,y,main = "Scatter plot",xlab = "Height",ylab = "Weight") 
+cor(x,y) 
+model=lm(y~x) 
+model 
+summary(model)
+ 
+Summary(model)
+ 
